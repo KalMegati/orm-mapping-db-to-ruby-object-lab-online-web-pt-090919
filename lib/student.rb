@@ -38,7 +38,7 @@ class Student
       WHERE grade = '9th'
     SQL
 
-    DB[:conn].execute(sql, name).map{ |row|
+    DB[:conn].execute(sql).map{ |row|
       self.new_from_db(row)
     }[0]
   end
